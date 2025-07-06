@@ -1,7 +1,4 @@
 - 👋 Hi, I’m @eric
-- 👀 I’m interested in machine learning 
-- 🌱 I’m currently learning python and tensorflow
-- 💞️ I’m looking to collaborate on AI and data science project
 - 📫 How to reach me: liug0009@gmail.com
 
 <!---
