@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FM Synth Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>🎛️ FM Synth Lab</h1>
+      <p class="subtitle">Play notes with your keyboard (A-W-S-E-D-F-T-G-Y-H-U-J-K) and sculpt the sound in real time.</p>
+
+      <section class="panel">
+        <h2>Voice</h2>
+        <label>
+          Carrier Wave
+          <select id="carrierWave">
+            <option>sine</option>
+            <option>triangle</option>
+            <option>sawtooth</option>
+            <option>square</option>
+          </select>
+        </label>
+        <label>
+          Modulator Wave
+          <select id="modWave">
+            <option>sine</option>
+            <option>triangle</option>
+            <option>sawtooth</option>
+            <option>square</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panel sliders">
+        <h2>FM Controls</h2>
+        <label>
+          Mod Ratio <span id="ratioVal">2.00</span>
+          <input id="modRatio" type="range" min="0.25" max="12" step="0.01" value="2" />
+        </label>
+        <label>
+          Mod Index <span id="indexVal">200</span>
+          <input id="modIndex" type="range" min="0" max="2000" step="1" value="200" />
+        </label>
+        <label>
+          Attack (s) <span id="attackVal">0.01</span>
+          <input id="attack" type="range" min="0.001" max="2" step="0.001" value="0.01" />
+        </label>
+        <label>
+          Decay (s) <span id="decayVal">0.25</span>
+          <input id="decay" type="range" min="0.01" max="3" step="0.01" value="0.25" />
+        </label>
+        <label>
+          Sustain <span id="sustainVal">0.55</span>
+          <input id="sustain" type="range" min="0" max="1" step="0.01" value="0.55" />
+        </label>
+        <label>
+          Release (s) <span id="releaseVal">0.35</span>
+          <input id="release" type="range" min="0.01" max="5" step="0.01" value="0.35" />
+        </label>
+        <label>
+          Master Volume <span id="volumeVal">0.70</span>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7" />
+        </label>
+      </section>
+
+      <section class="panel keyboard">
+        <h2>Keyboard</h2>
+        <div id="keys" class="keys"></div>
+      </section>
+
+      <button id="panic" class="panic">Stop All Notes</button>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
